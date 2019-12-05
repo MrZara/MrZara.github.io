@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- для опимізації на моб пристроях-->
+    <title>GT</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> <!--шрифтікі -->
+	<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css"> <!--цсс -->
+    <script src="js/script.js"></script>
+
+</head>
+
+
+<body>
+
+
+	<header id="header"> <!--хедер з двома кнопками для теми і менюшкою -->
+		 <button class="btn1" id="btn1"> Lite theme </button>
+		<nav class="menu" id="menu"  > <!--менюшка-->
+			<li><a href="#">Home</a></li>
+			<li><a href="#">Team show<i class="fa fa-angle-down"></i></a>
+				<ul class="submenu"  align="center">
+        		<li><a href="">Jeremy</a></li>
+        		<li><a href="">Richard</a></li>
+        		<li><a href="">James</a></li>
+      			</ul>
+
+				 
+
+			</li>
+			<li><a href="#">Contacts</a></li>
+		</nav>
+		 <button  type="button" class="btn" id="btn"> Dark theme </button>
+	
+	</header>
+
+
+	<section class="topbody" id="topbody">
+		<div class="background-image" style="background-image: url(img/top.jpg);"></div> <!--бекграунд секції -->
+		<h1>The Grand Tour</h1>
+		<h3>an automotive TV show created by former Top Gear presenters Jeremy Clarkson, Richard Hammond and James May.</h3>
+		<a>
+		<iframe src="https://www.youtube.com/embed/kLtpcxtk4HI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> <!--відосік -->
+		</a>
+	</section>
+
+
+
+
+	<section class="teamshow" id="teamshow">
+		
+			<h1>TEAM SHOW</h1>
+
+		<table>
+			<tr>
+				<td colspan="3"> <!--обєднуєм три секції таблиці -->
+				<h3>The Grand Tour is a car TV show created by former Top Gear presenters Jeremy Clarkson, Richard Hammond and James May. The show premiered on November 18, 2016 for the United Kingdom, United States, Germany, Austria and Japan. The world premiere, which will cover 200 countries, will take place on December 16, 2016</h3>
+				</td>
+			</tr>
+			<tr>
+				<td> <!--три секції з фотками --> 
+					<p><img src="img/team1.jpg" width="320" height="240" id="Jeremy1"></p>
+				</td>
+				<td >
+					<p><img src="img/team2.jpg" width="320" height="240" id="James1"></p>
+				</td>
+				<td >
+					<p><img src="img/team3.jpg" width="320" height="240" id="Hammond1"></p>
+				</td>
+
+			</tr>
+
+			<tr>
+				<td> <!--три секції віконечками вводу і кнопоцьками --> 
+					<p  class="textaboutnews"> 
+                   Season:    <input id="Season1"> 
+               </p> 
+				</td>
+				<td >
+					<p  class="textaboutnews"> 
+					Series:    <input id="Series2" type="Series2"  >
+					</p> 
+				</td>
+
+				<td >
+				<p  class="textaboutnews"> 
+					  <button onclick="opensite()" class="btn2"> Chose </button>
+					 </p> 
+				</td>
+			</tr>
+
+				</tr>
+				<td colspan="3" align="center">
+					<br>
+					<p><input name="laik" type="radio" value="nedzen" ;>Like</p>
+					<br>
+    				<p><input name="dizlaik" type="radio" value="dzen">Dislake</p>
+    				<br>
+    				<p><input type="submit" value="Chose"></p>
+    				<br>
+				</td>
+		</table>
+	</section>
+
+	<section class="footer1" id="footer1" >
+		<div class="background-image" style="background-image: url(img/end.jpg);"></div>
+	</section>
+	
+<script>
+  window.addEventListener("load", function(event) {
+    console.log("All resources finished loading!");
+  });
+</script>
+
+<script>	
+	btn.addEventListener("click", function () {
+    topbody.style.backgroundImage = 'url(img/top1.jpg)';
+    this.style.visibility = 'hidden';
+    btn1.style.visibility = 'visible';
+    teamshow.style.background = 'gray';
+    footer1.style.backgroundImage = 'url(img/end1.jpg)';
+    header.style.color = 'Blue'
+    topbody.style.color = 'Blue'
+    teamshow.style.color = 'Blue'
+    })
+
+
+
+    btn1.addEventListener("click", function () {
+    topbody.style.backgroundImage = 'url(img/top.jpg)';
+    this.style.visibility = 'hidden';
+    btn.style.visibility = 'visible';
+    teamshow.style.background = 'white';
+    footer1.style.backgroundImage = 'url(img/end.jpg)';
+    header.style.color = 'white'
+    topbody.style.color = 'white'
+    teamshow.style.color = 'gray'
+    })
+</script>
+
+<script>
+document.getElementById("Jeremy1").addEventListener("click", function() {
+  alert("Jeremy Clarkson!");
+});
+ 
+document.getElementById("James1").addEventListener("click", function() {
+  alert("James May!");
+});
+
+document.getElementById("Hammond1").addEventListener("click", function() {
+  alert("Hammond Richard!");
+});	
+</script>
+
+<script>
+
+const Series2 = document.querySelector('input[type="Series2"]');
+
+Series2.addEventListener('focus', (event) => {
+  event.target.style.background = 'pink';    
+});
+
+Series2.addEventListener('blur', (event) => {
+  event.target.style.background = '';    
+});
+</script>
+</body>
+
+</html>
